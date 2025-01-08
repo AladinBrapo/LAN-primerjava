@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Yummies - Discover Tasty Creations</title>
+    <title>ERŠ LanParty2025</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
