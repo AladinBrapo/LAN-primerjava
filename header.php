@@ -13,18 +13,19 @@
 ?>
 
 <header>
-    <div>LAN PARTY 2024/2025</div>
-    <div>
-        <ol>
-            <li><a href="index.php">Doma</a></li>
+    <div class="header-logo"><a href="index.php">LAN PARTY 2024/2025</a></div>
+    <nav class="header-nav">
+        <ul>
             <li><a href="team.php">Ekipa</a></li>
             <li><a href="sponsors.php">Sponzorji</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="about.php">O nas</a></li>
-        </ol>
-    </div>
-    <div>
-        Prijava
-        <img src="" alt="Person">
+        </ul>
+    </nav>
+    <div class="header-login">
+        <a href="login.php">
+            <span>Prijava</span>
+            <img src="img/login.png" alt="Person">
+        </a>
     </div>
 </header>
