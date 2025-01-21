@@ -9,6 +9,7 @@
 <body>
     <?php include 'header.php'; // Header ?>
     <main class="main-container">
+        <h1 class="main-title">Sponzorji</h1>
     </main>
     <?php include 'footer.php'; // Footer ?>
 </body>

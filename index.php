@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERŠ LanParty2025</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <?php include 'header.php'; // Header ?>
@@ -29,7 +30,7 @@
         </div>
         <div class="prijavi-se">
             <a href="login.php">
-                <button>Prijavi se</button> 
+                <button>PRIJAVI SE</button>
             </a>
         </div>
     </main>

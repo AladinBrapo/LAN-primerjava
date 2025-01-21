@@ -23,6 +23,8 @@ header {
 
 /* Logo Section */
 .header-logo {
+  flex: 1; /* Push to the left */
+  text-align: left;
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -38,6 +40,12 @@ header {
 }
 
 /* Navigation Section */
+.header-nav {
+  flex: 1; /* Center navigation */
+  display: flex;
+  justify-content: center;
+}
+
 .header-nav ul {
   list-style: none;
   display: flex; /* Ensures items are aligned in a row */
@@ -63,9 +71,11 @@ header {
 
 /* Login Section */
 .header-login {
-  display: flex;
-  align-items: center; /* Vertically center items */
-  color: #fff;
+  flex: 1; /* Push login section to the right */
+  display: flex; /* Enable flexbox for proper alignment */
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center; /* Vertically center the text and image */
+  gap: 8px; /* Add spacing between text and image */
 }
 
 .header-login a {
@@ -100,37 +110,6 @@ header {
   text-shadow: 0 0 20px #9d4edd, 0 0 30px #bb86fc;
 }
 
-/* Info Section */
-.info-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-/* Info Boxes */
-.info-box {
-  background: rgba(43, 6, 74, 0.9);
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(147, 75, 208, 0.8);
-  max-width: 400px;
-  width: 90%;
-}
-
-.info-box h2 {
-  color: #d59bf6;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px #9d4edd, 0 0 20px #bb86fc;
-}
-
-.info-box p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 5px 0;
-}
-
 /* Footer */
 footer {
   padding: 20px;
@@ -142,10 +121,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .info-section {
-      flex-direction: row;
-      justify-content: center;
-  }
 
   header {
     flex-direction: row;
@@ -163,6 +138,12 @@ footer {
       flex-direction: column; /* Stack items vertically */
       align-items: center;
       padding: 10px 15px;
+  }
+
+  .header-logo, .header-nav, .header-login {
+    flex: none; /* Disable flex-grow/shrink */
+    text-align: center; /* Center each section */
+    margin-bottom: 10px; /* Add spacing between sections */
   }
 
   .header-logo {
