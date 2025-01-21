@@ -27,6 +27,11 @@
                 <p>Vodnikova cesta 2,<br>3320 Velenje</p>
             </div>
         </div>
+        <div class="prijavi-se">
+            <a href="login.php">
+                <button>Prijavi se</button> 
+            </a>
+        </div>
     </main>
 
     <?php include 'footer.php'; // Footer ?>

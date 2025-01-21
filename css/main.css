@@ -41,7 +41,7 @@ header {
 .header-nav ul {
   list-style: none;
   display: flex; /* Ensures items are aligned in a row */
-  gap: 20px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -154,7 +154,6 @@ footer {
 
   .header-nav ul {
     flex-direction: row; /* Ensures horizontal alignment */
-    gap: 10px;
   }
 }
 

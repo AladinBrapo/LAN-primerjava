@@ -17,8 +17,11 @@
     <nav class="header-nav">
         <ul>
             <li><a href="team.php">Ekipa</a></li>
+            <li>|</li>
             <li><a href="sponsors.php">Sponzorji</a></li>
+            <li>|</li>
             <li><a href="blog.php">Blog</a></li>
+            <li>|</li>
             <li><a href="about.php">O nas</a></li>
         </ul>
     </nav>
