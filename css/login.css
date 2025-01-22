@@ -16,7 +16,8 @@ form {
   
   /* Input Fields */
   form input[type="email"], 
-  form input[type="password"] {
+  form input[type="password"],
+  form input[type="text"] {
     width: 100%;
     padding: 12px 15px;
     font-size: 1rem;
@@ -29,7 +30,8 @@ form {
   }
   
   form input[type="email"]:focus, 
-  form input[type="password"]:focus {
+  form input[type="password"]:focus,
+  form input[type="text"]:focus {
     outline: none;
     border-color: #d59bf6; /* Highlight border on focus */
     box-shadow: 0 0 10px rgba(213, 155, 246, 0.8);
@@ -76,16 +78,64 @@ form {
     gap: 10px; /* Spacing between icon and input */
     width: 100%;
   }
+
+  /* Registration Link */
+.registration-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #d59bf6;
+}
+
+.registration-link a {
+  color: #bb86fc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.registration-link a:hover {
+  color: #9d4edd;
+  text-shadow: 0 0 5px #bb86fc;
+}
+
+/* Message Section */
+.message {
+  margin: 20px auto;
+  padding: 15px 20px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+
+/* Success Message */
+.success-msg {
+  background: rgba(50, 200, 100, 0.2);
+  color: #32c864;
+  border: 1px solid #32c864;
+  box-shadow: 0 0 15px rgba(50, 200, 100, 0.5);
+}
+
+/* Error Message */
+.error-msg {
+  background: rgba(200, 50, 50, 0.2);
+  color: #c83232;
+  border: 1px solid #c83232;
+  box-shadow: 0 0 15px rgba(200, 50, 50, 0.5);
+}
   
   /* Responsive Styles */
   @media (max-width: 480px) {
     form {
       padding: 15px;
       gap: 15px;
+      max-width: 300px;
     }
   
     form input[type="email"], 
-    form input[type="password"] {
+    form input[type="password"],
+    form input[type="text"] {
       font-size: 0.9rem; /* Adjust font size */
       padding: 10px;
     }
