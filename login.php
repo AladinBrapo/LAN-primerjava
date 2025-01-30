@@ -39,14 +39,14 @@ if (isset($_POST['sub'])) {
                 $_SESSION['vrsta_up'] = $row['type'];
                 $_SESSION['uporabnik_id'] = $row['id'];
 
-                $message = '<div class="success-msg">Login was successful.</div>';
+                $message = '<div class="success-msg">Prijava uspešna.</div>';
                 echo "<script>
                         setTimeout(function() {
                             window.location.href = 'index.php';
                         }, 2000);
                       </script>";
             } else {
-                $message = '<div class="error-msg">Wrong password.</div>';
+                $message = '<div class="error-msg">Napačno geslo.</div>';
                 echo "<script>
                         setTimeout(function() {
                             window.location.href = 'login.php';
@@ -54,7 +54,7 @@ if (isset($_POST['sub'])) {
                       </script>";
             }
         } else {
-            $message = '<div class="error-msg">The user with this email does not exist.</div>';
+            $message = '<div class="error-msg">Uporabnik s tem e-poštnim naslovom ne obstaja.</div>';
             echo "<script>
                     setTimeout(function() {
                         window.location.href = 'login.php';

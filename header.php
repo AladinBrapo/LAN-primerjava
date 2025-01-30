@@ -16,7 +16,7 @@
     <div class="header-logo"><a href="index.php">LAN PARTY 2024/2025</a></div>
     <nav class="header-nav">
         <ul>
-            <li><a href="team.php">Ekipa</a></li>
+            <li><a href="team.php">Ekipe</a></li>
             <li>|</li>
             <li><a href="sponsors.php">Sponzorji</a></li>
             <li>|</li>
@@ -25,10 +25,26 @@
             <li><a href="about.php">O nas</a></li>
         </ul>
     </nav>
-    <div class="header-login">
-        <a href="login.php">
-            <span>Prijava</span>
-            <img src="img/login.png" alt="Person">
-        </a>
-    </div>
+    <?php
+        if (isset($_SESSION['log'])) {
+            $i = $_SESSION['im'];
+            $p = $_SESSION['pr'];
+            echo '
+            <div class="header-login">
+                <span class="user-info">' . htmlspecialchars($i) . ' ' . htmlspecialchars($p) . '</span>
+                <a href="logout.php">
+                    <span>Odjava</span>
+                    <img src="img/login.png" alt="Person">
+                </a>
+            </div>'; 
+        } else {
+            echo '
+            <div class="header-login">
+                <a href="login.php">
+                    <span>Prijava</span>
+                    <img src="img/login.png" alt="Person">
+                </a>
+            </div>';
+        }
+    ?>
 </header>

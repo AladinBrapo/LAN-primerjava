@@ -78,6 +78,14 @@ header {
   gap: 8px; /* Add spacing between text and image */
 }
 
+.header-login .user-info {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #d59bf6;
+  text-shadow: 0 0 5px #9d4edd;
+}
+
 .header-login a {
   text-decoration: none;
   font-weight: bold;
@@ -86,6 +94,10 @@ header {
   display: flex; /* Ensure content inside is aligned properly */
   align-items: center;
   gap: 5px;
+}
+
+.header-login a:hover {
+  color: #bb86fc;
 }
 
 .header-login img {
