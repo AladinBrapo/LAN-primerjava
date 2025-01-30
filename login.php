@@ -42,7 +42,7 @@ if (isset($_POST['sub'])) {
                 $message = '<div class="success-msg">Prijava uspešna.</div>';
                 echo "<script>
                         setTimeout(function() {
-                            window.location.href = 'index.php';
+                            window.location.href = 'team.php';
                         }, 2000);
                       </script>";
             } else {
