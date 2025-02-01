@@ -1,4 +1,5 @@
-<?php 
+<?php
+ 
 require_once 'baza.php';
 include_once 'seja.php';
 
