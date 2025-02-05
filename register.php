@@ -86,10 +86,10 @@ if (isset($_POST['sub'])) {
 
         <form method="post" action="register.php">
             <div>
-                <input type="text" name="ime" placeholder="Name" class="" required autofocus>
+                <input type="text" name="ime" placeholder="Ime" class="" required autofocus>
             </div>
             <div>
-                <input type="text" name="pri" placeholder="Surname" class="" required>
+                <input type="text" name="pri" placeholder="Priimek" class="" required>
             </div>
             <div>
                 <input type="email" name="mail" placeholder="Email" required>

@@ -1,0 +1,56 @@
+/* about.css */
+
+/* Main container for about content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Each about card styling */
+.about-card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;  /* Default width for larger screens (2 cards per row) */
+    max-width: 500px;  /* Limit the max width of cards */
+    text-align: center;
+    color: #fff;
+    border: 3px solid white; /* White border around each card */
+}
+
+/* Responsiveness for smaller screens (stack cards one by one) */
+@media (max-width: 768px) {
+    .about-card {
+        width: 90%; /* Stack the cards and make them 90% of the container width */
+    }
+}
+
+/* Additional styles for readability */
+.about-card h2 {
+    font-size: 1.6rem;
+    color: #d59bf6;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Adjust main title */
+.main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* For even larger screens (desktops) */
+@media (min-width: 1450px) {
+    .about-content {
+        margin-left: 10%;
+        width: 80%;
+    }
+}

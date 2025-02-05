@@ -1,0 +1,71 @@
+/* Blogs Section */
+.blog-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Blog Card */
+.blog-card {
+    background: rgba(43, 6, 74, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(147, 75, 208, 0.7);
+    padding: 20px;
+    width: 100%; /* Default to full width */
+    max-width: 300px; /* Max width of 300px for mobile */
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Blog Card Hover Effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(147, 75, 208, 1);
+}
+
+/* Blog Logo */
+.blog-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Blog Name */
+.blog-name {
+    font-size: 1.5rem;
+    color: #d59bf6;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #9d4edd;
+}
+
+/* Blog Description */
+.blog-description {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* For larger screens (computers) */
+@media (min-width: 768px) {
+    .blog-section {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the stacked cards */
+    }
+
+    .blog-card {
+        width: 80%; /* Make the cards wider for desktop */
+        max-width: 600px; /* Max width of 600px for desktop */
+    }
+}
+
+/* For even larger screens (desktops) */
+@media (min-width: 1200px) {
+    .blog-card {
+        width: 60%; /* Further make the cards wider on large screens */
+        max-width: 800px; /* Max width of 800px for large screens */
+    }
+}
