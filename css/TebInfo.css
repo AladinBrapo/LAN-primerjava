@@ -1,0 +1,94 @@
+.info-container {
+    padding: 20px 5vw; /* Flexible padding for responsiveness */
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    max-width: 1000px; /* Limit max width */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .info-heading {
+    font-size: 1.5rem; /* Scalable font size */
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center; /* Align text to the center */
+    margin-bottom: 20px;
+  }
+  
+  .info-content {
+    font-size: 1rem; /* Scalable font size */
+    line-height: 1.6; /* Improve readability */
+    color: #ffffff;
+    text-align: justify; /* Justify content for better layout */
+  }
+  
+  .info-highlight {
+    font-size: 1.125rem; /* Slightly larger for emphasis */
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .highlight {
+    font-weight: 700;
+    color: #ffcc00; /* Highlight text with a distinct color */
+  }
+  
+  /* Responsive Design */
+  
+  /* Small devices (phones) */
+  @media (max-width: 768px) {
+    .info-container {
+      padding: 20px;
+    }
+  
+    .info-heading {
+      font-size: 1.25rem; /* Adjust heading size */
+      text-align: center; /* Center-align for small screens */
+    }
+  
+    .info-content {
+      font-size: 0.9rem; /* Slightly reduce font size */
+      line-height: 1.5;
+      text-align: left; /* Align to left for better readability */
+    }
+  
+    .info-highlight {
+      font-size: 1rem; /* Adjust highlight size */
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .info-container {
+      padding: 20px 40px; /* Moderate padding for tablets */
+    }
+  
+    .info-heading {
+      font-size: 1.4rem; /* Moderate size for tablets */
+    }
+  
+    .info-content {
+      font-size: 1rem; /* Default font size */
+      text-align: justify;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1024px) {
+    .info-container {
+      padding: 30px 60px; /* Increase padding for large screens */
+    }
+  
+    .info-heading {
+      font-size: 1.75rem; /* Larger heading for desktops */
+    }
+  
+    .info-content {
+      font-size: 1rem; /* Default font size */
+      line-height: 1.6; /* Maintain good readability */
+    }
+  
+    .info-highlight {
+      font-size: 1.125rem; /* Keep highlight size consistent */
+    }
+  }

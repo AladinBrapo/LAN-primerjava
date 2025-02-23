@@ -1,0 +1,234 @@
+/* ==========================================================================
+   CSS Custom Properties (Global Variables)
+   ========================================================================== */
+   :root {
+    --primary-color: #ffffff;
+    --accent-color: #6a008a;
+    --accent-alt: #4a148c;
+    --background-color: #0b0b10;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 10px;
+    --transition: 0.3s ease-in-out;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ==========================================================================
+     TebLogin Component – Scoped Styles
+     ========================================================================== */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+  }
+  
+  /* User Name / Header */
+  .team-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    /* Optional: Gradient text effect */
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Main Content Grid */
+  .content-container {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Card-like Sections for each area */
+  .login-section,
+  .tournament-selection,
+  .slogan-section {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Radio Buttons Group (in login-section) */
+  .radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .radio-group label {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Tournament Select (Dark Background) */
+  .tournament-select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background: #0b0b10; /* Dark background */
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: 0.5rem;
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+  }
+  
+  /* Slogan Input Field */
+  .input-field {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background: var(--input-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    margin-top: 0.5rem;
+  }
+  
+  /* Button Section */
+  .button-section {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Save Button (Primary) */
+  .save-button {
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition);
+  }
+  
+  .save-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+  }
+  
+  /* ==========================================================================
+     Modal Styles
+     ========================================================================== */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modal h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .modal label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal input,
+  .modal select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--input-bg);
+    color: var(--primary-color);
+    outline: none;
+    margin-bottom: 1rem;
+  }
+  
+  .modal button {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-alt));
+    box-shadow: 0 0 10px rgba(106, 0, 138, 0.5);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition);
+    margin: 0.5rem;
+  }
+  
+  .modal button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--accent-alt), var(--accent-color));
+  }
+  
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* ==========================================================================
+     Responsive Adjustments
+     ========================================================================== */
+  @media (max-width: 576px) {
+    .team-name {
+      font-size: 1.75rem;
+    }
+    .save-button {
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  

@@ -1,8 +1,8 @@
 <?php
-$db_host = 'localhost';
-$db_name = 'lan_primerjava';
-$db_user = 'root';
-$db_password = '';
+$db_host = '78.47.245.88';
+$db_name = 'lan_test';
+$db_user = 'matic';
+$db_password = 'Nogomet2015!';
 
 // Create connection
 $link = new mysqli($db_host, $db_user, $db_password, $db_name);

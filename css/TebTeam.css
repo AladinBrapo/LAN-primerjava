@@ -1,0 +1,176 @@
+.team-container {
+    text-align: center;
+    padding: 20px 5vw; /* Flexible horizontal padding */
+  }
+  
+  .team-title {
+    font-size: 2.5rem; /* Scalable title size */
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .team-groups {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px;
+  }
+  
+  .team-group {
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 200px; /* Ensure minimum size */
+    max-width: 300px; /* Limit maximum size */
+    flex: 1 1 calc(33.33% - 20px); /* Flexible grid for responsive layout */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .team-group:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  .team-group h2 {
+    color: #fff;
+    font-size: 1.5rem; /* Scalable heading size */
+    margin-bottom: 15px;
+  }
+  
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .team-button {
+    background-color: #fff;
+    color: #4a148c;
+    font-size: 1rem; /* Scalable font size */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .team-button:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  }
+  
+  .team-button:active {
+    transform: scale(1); /* Reset scaling when active */
+  }
+  
+  .tournament-select {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background: #0b0b10;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    margin-bottom: 2rem;
+  }
+  .filter-label {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  
+  /* Small devices (phones) */
+  @media (max-width: 768px) {
+    .team-title {
+      font-size: 2rem; /* Reduce title size */
+    }
+  
+    .team-groups {
+      gap: 15px; /* Reduce gap between groups */
+      justify-content: center; /* Center-align for small screens */
+    }
+  
+    .team-group {
+      flex: 1 1 100%; /* Full width for each group */
+      max-width: none; /* Remove max-width constraint */
+      padding: 20px;
+    }
+  
+    .team-group h2 {
+      font-size: 1.25rem; /* Reduce heading size */
+    }
+  
+    .team-button {
+      font-size: 0.9rem; /* Slightly smaller button size */
+      padding: 8px 12px;
+    }
+  
+    .background-image img {
+      width: 105%;
+      height: 600px; /* Adjust height for smaller screens */
+    }
+  
+    .team-page .background-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%; /* Adjust width for smaller screens */
+      height: auto;
+      z-index: -1;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .team-title {
+      font-size: 2.25rem; /* Moderate title size */
+    }
+  
+    .team-group {
+      flex: 1 1 calc(50% - 20px); /* Two groups per row */
+      max-width: 300px; /* Limit width for groups */
+    }
+  
+    .team-button {
+      font-size: 1rem; /* Default button size */
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1024px) {
+    .team-title {
+      font-size: 2.5rem; /* Larger title for desktops */
+    }
+  
+    .team-groups {
+      gap: 20px; /* Maintain spacious layout */
+    }
+  
+    .team-group {
+      flex: 1 1 calc(33.33% - 20px); /* Three groups per row */
+      max-width: 300px; /* Maintain max-width */
+    }
+  
+    .team-button {
+      font-size: 1rem; /* Default button size */
+    }
+  }
+  

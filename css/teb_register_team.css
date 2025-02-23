@@ -1,0 +1,273 @@
+/* ==========================================================================
+   CSS Custom Properties & Global Resets
+   (These remain global, but the styles below are only for TebRegisterTeam)
+   ========================================================================== */
+   :root {
+    --primary-color: #ffffff;
+    --secondary-color: #cccccc;
+    --accent-color: #6a008a;
+    --accent-alt: #4a148c;
+    --background-color: #0b0b10;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --modal-bg-gradient: linear-gradient(145deg, #3e035a, #290b48);
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --transition: 0.3s ease;
+    --border-radius: 12px;
+    --font-family: "Poppins", sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background: radial-gradient(circle at 30% 30%, #14151c, var(--background-color) 60%);
+    color: var(--primary-color);
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     TebRegisterTeam Scoped Styles
+     ========================================================================== */
+  .teb-register-team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Team Info Card */
+  .teb-register-team-container .team-info {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .teb-register-team-container .team-info h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .teb-register-team-container .team-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .teb-register-team-container .team-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .teb-register-team-container .team-info ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .teb-register-team-container .team-info li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Buttons & Inputs */
+  .teb-register-team-container .team-button,
+  .teb-register-team-container .add-button,
+  .teb-register-team-container .save-button,
+  .teb-register-team-container .delete-team-button,
+  .teb-register-team-container .remove-member-button {
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition);
+  }
+  
+  .teb-register-team-container .team-button:hover,
+  .teb-register-team-container .add-button:hover,
+  .teb-register-team-container .save-button:hover,
+  .teb-register-team-container .delete-team-button:hover,
+  .teb-register-team-container .remove-member-button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+  }
+  
+  /* Delete team button specifics */
+  .teb-register-team-container .delete-team-button {
+    background: darkred;
+    width: 50%;
+    max-width: 200px;
+    margin: 1rem auto;
+  }
+  
+  .teb-register-team-container .delete-team-button:hover {
+    background: red;
+  }
+  
+  /* Remove member button specifics */
+  .teb-register-team-container .remove-member-button {
+    background: darkred;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .teb-register-team-container .remove-member-button:hover {
+    background: red;
+  }
+  
+/* Existing combined rule for modal input/select - split into two rules for finer control */
+.teb-register-team-container .modal input,
+.teb-register-team-container .add-member input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  /* Keeping a slightly translucent dark overlay for text fields */
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+/* Updated rule for select elements to force a dark background */
+.teb-register-team-container .modal select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: #0b0b10;  /* Use a pure dark background */
+  color: var(--primary-color);
+  outline: none;
+  margin-bottom: 1rem;
+  
+  /* Remove default dropdown styling for consistent appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Optional: Add a custom dropdown arrow if needed */
+.teb-register-team-container .modal select {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+  
+  /* Add Member Section */
+  .teb-register-team-container .add-member {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* Modal Styling */
+  .teb-register-team-container .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .teb-register-team-container .modal {
+    background: linear-gradient(145deg, #3e035a, #290b48);
+    background-blend-mode: overlay;
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .teb-register-team-container .modal h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .teb-register-team-container .modal label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .teb-register-team-container .modal button {
+    background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition);
+  }
+  
+  .teb-register-team-container .modal button:hover {
+    transform: translateY(-3px);
+        background: linear-gradient(135deg, #6a008a, #4a148c);
+    box-shadow: 0 0 10px rgba(106,0,138,0.5);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .teb-register-team-container .team-info h1 {
+      font-size: 1.75rem;
+    }
+    .teb-register-team-container .team-info h2 {
+      font-size: 1.25rem;
+    }
+    .teb-register-team-container .team-info h3 {
+      font-size: 1.125rem;
+    }
+    .teb-register-team-container .modal {
+      padding: 1.5rem;
+    }
+    .teb-register-team-container .modal h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
